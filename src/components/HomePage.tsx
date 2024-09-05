@@ -14,7 +14,7 @@ const words = [
 
 const HomePage = () => {
   return (
-    <div className="h-[50rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <div className="min-h-screen w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden py-10">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -66,7 +66,7 @@ const HomePage = () => {
           as well. Like <br />
         </p>
         <br />
-        <div className="text-2xl max-w-3xl font-normal text-neutral-600 dark:text-neutral-400 text-center mx-auto">
+        <div className="text-2xl max-w-3xl font-semibold text-neutral-600 dark:text-neutral-400 text-center mx-auto">
           <FlipWords words={words} />
         </div>
       </div>

@@ -13,6 +13,9 @@ const config: Config = {
   // darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        custom: ["Handjet", "sans-serif"], // Replace with your font name
+      },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
       },
