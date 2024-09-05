@@ -16,8 +16,7 @@ export const HeroParallax = ({
 }: {
   products: {
     title: string;
-    link: string;
-    thumbnail: string;
+    thumbnail: any;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -124,15 +123,15 @@ const words = [
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+      <h1 className="text-2xl md:text-7xl font-bold text-neutral-200 dark:text-white">
         <TypewriterEffectSmooth words={words} />
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        I’ve put together this little corner of the internet just for you. It’s
-        a place where you find solution to all your doubts. I wanted to create
-        something special, something that feels like it’s just ours because you
-        mean that much to me. <br /> Feel my Presence around you whenever you
-        feel lost!
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-white dark:text-neutral-200">
+        I&apos;ve put together this little corner of the internet just for you.
+        It&apos;s a place where you find solution to all your doubts. I wanted
+        to create something special, something that feels like it&apos;s just
+        ours because you mean that much to me. <br /> Feel my Presence around
+        you whenever you feel lost!
         <br />
         <br />
         Always here for you <br />
@@ -148,7 +147,7 @@ export const ProductCard = ({
 }: {
   product: {
     title: string;
-    link: string;
+
     thumbnail: string;
   };
   translate: MotionValue<number>;
@@ -164,18 +163,14 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
-        />
-      </Link>
+      <Image
+        src={product.thumbnail}
+        height="600"
+        width="600"
+        className="object-cover object-left-top absolute h-full w-full inset-0"
+        alt={product.title}
+      />
+
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
